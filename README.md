@@ -9,16 +9,29 @@
 
 ## About PHP Unit Testing
 Here i tested Email Sent function
+
 Optional:
+
 > composer run post-root-package-test-install
+
 > php artisan migrate --env=testing
+
 > php artisan db:seed --env=testing
+
 Required:
+
 Ref: https://laravel.com/docs/11.x/mail#configuring-the-sender
+
 > php artisan make:mail UserEmail --markdown=email.users.welcome
+
 https://laravel.com/docs/11.x/mail#looping-over-recipients
+
 > php artisan make:controller EmailSendController
+
 > php artisan serve --env=testing
+
 > php artisan make:test EmailTest
-> php artisan test --testsuite=Feature
+
+> php artisan test --testsuite=Feature ./tests/Feature/EmailTest.php
+
 > php artisan key:generate --show
